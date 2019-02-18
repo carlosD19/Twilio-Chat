@@ -1,0 +1,17 @@
+#navbarMenu{
+  color: white;
+  padding-right: 50px;
+  font-size: 150%;
+  font-family: bold;
+}
+
+#navbarTittle{
+  color: white;
+  padding-right: 50px;
+  font-size: 150%;
+  font-family: bold;
+}
+
+#navbarMenu:hover{
+  background-color: #303f52;
+}
