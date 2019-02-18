@@ -1,2 +1,2 @@
 # Twilio-Chat
- Project in which you can chat using the Twilio API
+ The main objective was to develop a client application that consumes the Twillio API to perform a chat.
