@@ -16,11 +16,21 @@ class UserController extends Controller
         $this->client = new Client(env('TWILIO_SID'), env('TWILIO_TOKEN'));
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response the login view
+     */
     public function index()
     {
         return view('security.login');
     }
-
+    /**
+     * In this method it is verify that the username and password are correct
+     *
+     * @param  \Illuminate\Http\Request $request receive the username and password
+     * @return \Illuminate\Http\Response the view of the respective user
+     */
     public function login(Request $request)
     {
         $this->validate($request, [
@@ -48,7 +58,12 @@ class UserController extends Controller
             return back()->with('info', 'Username or SID invalid.');
         }
     }
-    
+    /**
+     * In this method a new user is registered
+     *
+     * @param  \Illuminate\Http\Request $request receive the username, password and password confirm
+     * @return \Illuminate\Http\Response the view of the respective user
+     */
     public function register(Request $request)
     {
         $this->validate($request, [
@@ -71,7 +86,11 @@ class UserController extends Controller
             }
         }
     }
-
+    /**
+     * In this method the user logout
+     *
+     * @return \Illuminate\Http\Response the login view
+     */
     public function logout()
     {
         Session::flush();
