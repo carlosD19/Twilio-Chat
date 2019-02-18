@@ -64,7 +64,7 @@
 					$('#rechargeMessage').load('message/{{$channel->sid}}');
 					$("#rechargeMessage").animate({ scrollTop: $('#rechargeMessage')[0].scrollHeight}, 1000);
 					$('#rechargeMembers').load('member/{{$channel->sid}}');
-				}, 3000
+				}, 1500
 			);
 		}
 	});
