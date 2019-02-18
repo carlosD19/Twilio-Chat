@@ -10,18 +10,16 @@ class ChatController extends Controller
 {
 
     protected $client;
-    /**
-     * 
-     */
+    
     public function __construct()
     {
         $this->client = new Client(env('TWILIO_SID'), env('TWILIO_TOKEN'));
     }
 
     /**
-     * Display a listing of the resource.
+     * In this method create a new service if no exist
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response the chats view
      */
     public function index()
     {
@@ -35,7 +33,10 @@ class ChatController extends Controller
         return view('chats.index', compact('channels', 'userChannels'));
     }
     /**
-     * 
+     * In this method is to join in a new channel
+     *
+     * @param  $sid of the channel
+     * @return back the view
      */
     public function join($sid)
     {
@@ -54,7 +55,10 @@ class ChatController extends Controller
         }
     }
     /**
-     * 
+     * In this method is to join the chat
+     *
+     * @param  $sid of the channel
+     * @return the chat view
      */
     public function channel($sid)
     {
@@ -69,7 +73,10 @@ class ChatController extends Controller
         return view('chats/chat', compact('channel'));
     }
     /**
-     * 
+     * In this method it is to get messages from the channel
+     *
+     * @param  $sid of the channel
+     * @return the message view
      */
     public function message($sid)
     {
@@ -78,7 +85,10 @@ class ChatController extends Controller
         return view('chats/message', compact('messages'));
     }
     /**
-     * 
+     * In this method it is to get members from the channel
+     *
+     * @param  $sid of the channel
+     * @return the member view
      */
     public function member($sid)
     {
@@ -87,7 +97,10 @@ class ChatController extends Controller
         return view('chats/member', compact('members'));
     }
     /**
-     * 
+     * In this method is to send messages to the channel
+     *
+     * @param  \Illuminate\Http\Request $request receive the message and channel´s sid
+     * @return \Illuminate\Http\Response back the view
      */
     public function sendMessage(Request $request)
     {
