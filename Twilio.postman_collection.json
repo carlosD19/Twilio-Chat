@@ -1,0 +1,749 @@
+{
+	"info": {
+		"_postman_id": "24d1816b-c831-45b6-a439-2d064d1cccc6",
+		"name": "Twilio",
+		"description": "All methods to develop the twilio project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List of Services",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services"
+					]
+				},
+				"description": "In this request you can list services"
+			},
+			"response": []
+		},
+		{
+			"name": "Get service",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISb2919ec1a36e4da38223d841d34b92ec",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISb2919ec1a36e4da38223d841d34b92ec"
+					]
+				},
+				"description": "In this request you can get information like sid, friendlyName and others."
+			},
+			"response": []
+		},
+		{
+			"name": "Create service",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "FriendlyName",
+							"value": "Twilio-Chat2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						""
+					]
+				},
+				"description": "In this request you can create a new service"
+			},
+			"response": []
+		},
+		{
+			"name": "Update service",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "FriendlyName",
+							"value": "NuevoNombre",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/IS5045f1d1459c41229ccfa3250b0db7c2",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"IS5045f1d1459c41229ccfa3250b0db7c2"
+					]
+				},
+				"description": "In this request you can update a specific service"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete service",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "FriendlyName",
+							"value": "Twilio-Chat2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISa431aec7a4694f93ad32bd657c986a8f",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISa431aec7a4694f93ad32bd657c986a8f"
+					]
+				},
+				"description": "In this request you can delete a specific service"
+			},
+			"response": []
+		},
+		{
+			"name": "List of Channel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISb2919ec1a36e4da38223d841d34b92ec/Channels",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISb2919ec1a36e4da38223d841d34b92ec",
+						"Channels"
+					]
+				},
+				"description": "In this request can list the channels in a specific service"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Channel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISb2919ec1a36e4da38223d841d34b92ec/Channels/CH5cc11a147e264dce84784f861d0ab535",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISb2919ec1a36e4da38223d841d34b92ec",
+						"Channels",
+						"CH5cc11a147e264dce84784f861d0ab535"
+					]
+				},
+				"description": "In this request you can get specific information about the channel"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Channel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "FriendlyName",
+							"value": "Messenger",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISb2919ec1a36e4da38223d841d34b92ec/Channels",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISb2919ec1a36e4da38223d841d34b92ec",
+						"Channels"
+					]
+				},
+				"description": "In this request you can create a new channel in a specific service"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Channel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "FriendlyName",
+							"value": "Messenger2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISb2919ec1a36e4da38223d841d34b92ec/Channels/CH5cc11a147e264dce84784f861d0ab535",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISb2919ec1a36e4da38223d841d34b92ec",
+						"Channels",
+						"CH5cc11a147e264dce84784f861d0ab535"
+					]
+				},
+				"description": "In this request you can update a specific channel"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Channel",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISb2919ec1a36e4da38223d841d34b92ec/Channels/CH5cc11a147e264dce84784f861d0ab535",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISb2919ec1a36e4da38223d841d34b92ec",
+						"Channels",
+						"CH5cc11a147e264dce84784f861d0ab535"
+					]
+				},
+				"description": "In this request you can delete a specific channel"
+			},
+			"response": []
+		},
+		{
+			"name": "List of Members",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISb2919ec1a36e4da38223d841d34b92ec/Channels/CH83a1eef700764691bdf48d27b55243f5/Members",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISb2919ec1a36e4da38223d841d34b92ec",
+						"Channels",
+						"CH83a1eef700764691bdf48d27b55243f5",
+						"Members"
+					]
+				},
+				"description": "In this request you can list the members of the channel"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Member",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Identity",
+							"value": "Kevin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISb2919ec1a36e4da38223d841d34b92ec/Channels/CH83a1eef700764691bdf48d27b55243f5/Members",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISb2919ec1a36e4da38223d841d34b92ec",
+						"Channels",
+						"CH83a1eef700764691bdf48d27b55243f5",
+						"Members"
+					]
+				},
+				"description": "In this request you can add a member in a channel"
+			},
+			"response": []
+		},
+		{
+			"name": "List of message",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISb2919ec1a36e4da38223d841d34b92ec/Channels/CH83a1eef700764691bdf48d27b55243f5/Messages",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISb2919ec1a36e4da38223d841d34b92ec",
+						"Channels",
+						"CH83a1eef700764691bdf48d27b55243f5",
+						"Messages"
+					]
+				},
+				"description": "In this request you can list messages of the channel"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "AC8923d87afc38537286466bccf444c992",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QUNkMzJmNzhmODAyNzg1MDI0MGU3NTRlYzY2NWE4MDgyYzpkZjc3YTVkNzczYTAxZWE1MDNiODkwYzUzYmFlYTYyMg=="
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "From",
+							"value": "Kevin",
+							"type": "text"
+						},
+						{
+							"key": "Body",
+							"value": "Hola",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://chat.twilio.com/v2/Services/ISb2919ec1a36e4da38223d841d34b92ec/Channels/CH83a1eef700764691bdf48d27b55243f5/Messages",
+					"protocol": "https",
+					"host": [
+						"chat",
+						"twilio",
+						"com"
+					],
+					"path": [
+						"v2",
+						"Services",
+						"ISb2919ec1a36e4da38223d841d34b92ec",
+						"Channels",
+						"CH83a1eef700764691bdf48d27b55243f5",
+						"Messages"
+					]
+				},
+				"description": "In this request you can send messages to channel"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "af0f123d4d7e59b73e536d8d1dbad5c6",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "AC8923d87afc38537286466bccf444c992",
+				"type": "string"
+			}
+		]
+	}
+}
