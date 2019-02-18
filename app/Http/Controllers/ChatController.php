@@ -10,14 +10,14 @@ class ChatController extends Controller
 {
 
     protected $client;
-    
+
     public function __construct()
     {
         $this->client = new Client(env('TWILIO_SID'), env('TWILIO_TOKEN'));
     }
 
     /**
-     * In this method create a new service if no exist
+     * In this method list channels and userChannels
      *
      * @return \Illuminate\Http\Response the chats view
      */

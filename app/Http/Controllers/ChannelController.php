@@ -17,9 +17,9 @@ class ChannelController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * In this method create a new service if no exist
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response the view channels with list of channels
      */
     public function index()
     {
@@ -33,9 +33,9 @@ class ChannelController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * In this method redirect to channels index
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response the channels index view
      */
     public function create()
     {
@@ -43,10 +43,10 @@ class ChannelController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * In this method create a new channel
      *
-     * @param  \Illuminate\Http\ChannelRequest $request
-     * @return \Illuminate\Http\Response
+     * @param  \Illuminate\Http\ChannelRequest $request receive the channel´s name
+     * @return \Illuminate\Http\Response back the view
      */
     public function store(ChannelRequest $request)
     {
@@ -57,10 +57,10 @@ class ChannelController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified channel.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int  $sid of the channel
+     * @return \Illuminate\Http\Response the edit view
      */
     public function edit($sid)
     {
@@ -75,11 +75,11 @@ class ChannelController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified channel from twilio API.
      *
-     * @param  \Illuminate\Http\ChannelRequest  $request
-     * @param  int  $sid
-     * @return \Illuminate\Http\Response
+     * @param  \Illuminate\Http\ChannelRequest  $request receive the new channel´s name
+     * @param  int  $sid of the old channel
+     * @return \Illuminate\Http\Response the principal view
      */
     public function update(ChannelRequest $request, $sid)
     {
@@ -89,10 +89,10 @@ class ChannelController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified channel from twilio API.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int  $sid of the channel
+     * @return \Illuminate\Http\Response back the view
      */
     public function destroy($sid)
     {
