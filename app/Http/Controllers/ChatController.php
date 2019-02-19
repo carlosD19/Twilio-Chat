@@ -24,6 +24,8 @@ class ChatController extends Controller
     public function index()
     {
         $services = $this->client->chat->v2->services->read();
+        $channels = array();
+        $userChannels = array();
         if ($services) {
             $channels = $this->client->chat->v2->services($services[0]->sid)->channels->read();
             if (Session::has('user')) {
